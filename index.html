@@ -122,17 +122,12 @@ section{padding:var(--gap) var(--pad);scroll-margin-top:var(--hh,60px)}
 }
 .hero .tick{margin:0 0 clamp(28px,5vw,48px)}
 .hero h1{
-  margin:0;font-family:var(--kr);
-  font-size:clamp(26px,4.6vw,58px);
-  line-height:1.28;letter-spacing:-.02em;font-weight:400;
-  max-width:19ch;
+  margin:0;font-family:var(--sans);
+  font-size:clamp(28px,4.8vw,58px);
+  line-height:1.2;letter-spacing:-.015em;font-weight:400;
+  max-width:16em;
 }
 .hero h1 b{font-weight:600}
-.hero .en{
-  margin:clamp(22px,3vw,34px) 0 0;
-  font-size:clamp(13px,1.45vw,19px);line-height:1.55;
-  letter-spacing:.005em;color:var(--ink-2);max-width:44ch;font-weight:400;
-}
 .hero-foot{
   display:flex;flex-wrap:wrap;gap:10px 34px;align-items:baseline;
   margin-top:clamp(48px,9vh,110px);padding-top:22px;border-top:var(--rule);
@@ -243,6 +238,12 @@ figcaption{
   border-bottom:1px solid var(--line);padding-bottom:6px;transition:border-color .3s;
 }
 .mail:hover{border-color:var(--ink)}
+.contact-social{margin:20px 0 0;font-size:13px;letter-spacing:.04em}
+.contact-social a{
+  color:var(--ink-2);border-bottom:1px solid var(--line);
+  padding-bottom:2px;transition:color .3s,border-color .3s;
+}
+.contact-social a:hover{color:var(--ink);border-color:var(--ink)}
 .contact .caps--mute{margin-top:28px;line-height:2.4}
 
 footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
@@ -286,8 +287,7 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
   <section class="hero">
     <div class="wrap">
       <div class="tick"></div>
-      <h1>브랜드의 감도를<br><b>비즈니스 성과</b>로 연결하는<br>크리에이티브 디렉터.</h1>
-      <p class="en">A Creative Director who connects brand sensibility to business results.</p>
+      <h1 class="hero-h1">Creative Director creating<br><b>meaningful brand experiences.</b></h1>
 
       <div class="hero-foot">
         <div class="caps--mute caps">Creative Director<br>Seoul, KR</div>
@@ -339,8 +339,8 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
           <figure class="fig" style="--r:125%" data-src="images/look-02-product.webp" data-alt="Look Optics 아이웨어 제품 스틸라이프">
             <div class="fig__ph"><span>Product Still Life</span></div>
           </figure>
-          <figure class="fig" style="--r:125%" data-src="images/look-03-portrait.webp" data-alt="Look Optics 에디토리얼 포트레이트">
-            <div class="fig__ph"><span>Editorial Portrait</span></div>
+          <figure class="fig" style="--r:125%" data-src="images/look-05-chu.webp" data-alt="추성훈 착용 Look Optics 아이웨어 캠페인 컷">
+            <div class="fig__ph"><span>Campaign Portrait</span></div>
           </figure>
           <figure class="fig" style="--r:125%" data-src="images/look-04-editorial.webp" data-alt="Look Optics 흑백 에디토리얼 컷">
             <div class="fig__ph"><span>Editorial</span></div>
@@ -375,8 +375,8 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
           <figure class="fig" style="--r:118%" data-src="images/lq-01-visual-system.webp" data-alt="Louis Quatorze 뉴 모노그램 비주얼 시스템">
             <div class="fig__ph"><span>Visual System</span></div>
           </figure>
-          <figure class="fig" style="--r:118%" data-src="images/lq-02-muse.webp" data-alt="Louis Quatorze 브랜드 하우스 뮤즈 캠페인">
-            <div class="fig__ph"><span>Brand House Muse</span></div>
+          <figure class="fig" style="--r:118%" data-src="images/lq-02-editorial.webp" data-alt="Louis Quatorze 시그니처 백 화보">
+            <div class="fig__ph"><span>Signature Campaign</span></div>
           </figure>
         </div>
         <div class="plate plate--3" style="margin-top:14px">
@@ -409,10 +409,10 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
           </figure>
         </div>
         <div class="plate plate--3" style="margin-top:14px">
-          <figure class="fig" style="--r:125%" data-src="images/platon-02-bi.webp" data-alt="Find Kapoor 브랜드 심볼 그리드 시스템">
-            <div class="fig__ph"><span>BI / CI System</span></div>
+          <figure class="fig" style="--r:125%" data-src="images/platon-05-pingo.webp" data-alt="Find Kapoor Pingo Bag 제품 캠페인">
+            <div class="fig__ph"><span>Product Campaign</span></div>
           </figure>
-          <figure class="fig" style="--r:125%" data-src="images/platon-03-campaign.webp" data-alt="Platon Ventures 브랜드 캠페인 비주얼">
+          <figure class="fig" style="--r:125%" data-src="images/platon-06-orange.webp" data-alt="Find Kapoor 제품 캠페인 화보">
             <div class="fig__ph"><span>Brand Campaign</span></div>
           </figure>
           <figure class="fig" style="--r:125%" data-src="images/platon-04-muse.webp" data-alt="Platon Ventures 브랜드 모델 광고">
@@ -531,10 +531,10 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
       </div>
 
       <div class="narrow">
-        <p class="lede">19년 이상 패션·뷰티·아이웨어 업계에서 브랜드 전략과 비주얼 커뮤니케이션을 총괄해온 크리에이티브 디렉터입니다.</p>
+        <p class="lede">패션·뷰티·아이웨어 업계에서 브랜드 전략과 비주얼 커뮤니케이션을 총괄해온 크리에이티브 디렉터입니다.</p>
         <p class="body-kr">브랜드 아이덴티티 구축부터 캠페인, 디지털 콘텐츠, 리테일 공간, PR 비주얼까지 온·오프라인 전반의 통합 브랜딩을 리딩해왔습니다. Look Optics, Louis Quatorze, Find Kapoor, J.Estina, Moonshot 등 다양한 브랜드 환경에서 브랜드 감도와 시장성을 연결하는 크리에이티브 전략을 수행했습니다.</p>
-        <p class="body-kr">단순한 디자인 수행을 넘어, 브랜드의 가치와 비즈니스 성과를 연결하는 크리에이티브 리더로 성장해왔습니다.</p>
-        <p class="body-en">Over nineteen years directing brand strategy and visual communication across fashion, beauty and eyewear — from identity systems and campaigns to digital content, retail spaces and PR visuals. My work joins a brand's sensibility to the market it lives in, and turns creative direction into measurable business outcomes.</p>
+        <p class="body-kr">단순한 디자인 수행을 넘어, 브랜드의 가치와 비즈니스 성과를 연결하는 크리에이티브 리더입니다.</p>
+        <p class="body-en">Directing brand strategy and visual communication across fashion, beauty and eyewear — from identity systems and campaigns to digital content, retail spaces and PR visuals. My work joins a brand's sensibility to the market it lives in, and turns creative direction into measurable business outcomes.</p>
       </div>
 
       <div class="cols">
@@ -584,9 +584,6 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
               <p>제작물과 프로덕션의 완성도를 관리하여 브랜딩의 가치를 높이고, 외주사와 내부 조직 전반의 협업을 이끕니다.<br><span style="color:#b4b4b4">High-quality production &amp; collaboration</span></p>
             </li>
           </ul>
-
-          <h3 class="caps" style="margin-top:52px">Tools</h3>
-          <p class="body-en" style="margin-top:16px">Adobe Photoshop · Illustrator · InDesign · Microsoft Office — Advanced</p>
         </div>
       </div>
     </div>
@@ -597,6 +594,9 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
     <div class="wrap">
       <div class="tick"></div>
       <a class="mail" href="mailto:jh1115@hotmail.com">jh1115@hotmail.com</a>
+      <p class="contact-social">
+        <a href="https://www.instagram.com/superjay__official" target="_blank" rel="noopener noreferrer">@superjay__official</a>
+      </p>
       <!-- 휴대폰 번호와 상세 주소는 의도적으로 제외했습니다.
            공개 페이지에 두면 수집 봇의 표적이 되고, 한 번 유출되면
            되돌릴 수 없습니다. 필요하면 이 아래에 다시 넣으면 됩니다. -->
