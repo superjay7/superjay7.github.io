@@ -205,6 +205,28 @@ figcaption{
   font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);
 }
 
+/* ── DIGITAL: browser mockups ────────────── */
+.mockup-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6vw,36px)}
+.mockup{
+  margin:0;border:1px solid var(--line);border-radius:9px;overflow:hidden;
+  background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+.mockup__bar{
+  display:flex;align-items:center;gap:7px;
+  padding:11px 15px;border-bottom:1px solid var(--line);background:var(--wash);
+}
+.mockup__dot{width:10px;height:10px;border-radius:50%;background:#dcdcdc;flex:0 0 auto}
+.mockup__url{
+  margin-left:10px;font-family:var(--sans);font-size:11px;
+  letter-spacing:.02em;color:var(--ink-3);text-transform:none;
+}
+.mockup__screen{display:block;width:100%;height:auto}
+.mockup-cap{
+  margin-top:clamp(22px,3vw,34px);text-align:center;
+  font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);
+}
+@media(max-width:720px){.mockup-grid{grid-template-columns:1fr}}
+
 /* ── ABOUT ───────────────────────────────── */
 .lede{
   font-family:var(--kr);font-size:clamp(16px,1.85vw,23px);line-height:1.75;
@@ -275,6 +297,7 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
       <li><a href="#fashion">Fashion</a></li>
       <li><a href="#eyewear">Eyewear</a></li>
       <li><a href="#branding">Branding</a></li>
+      <li><a href="#digital">Digital</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -475,8 +498,8 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
           <figure class="fig" style="--r:66%" data-src="images/jestina-01-print.webp" data-alt="J.Estina 지면 광고 — Timeless Momentum 캠페인">
             <div class="fig__ph"><span>Print Advertisement · TVC</span></div>
           </figure>
-          <figure class="fig" style="--r:66%" data-src="images/jestina-02-ooh.webp" data-alt="J.Estina 옥외 광고 — 지하철 및 버스쉘터">
-            <div class="fig__ph"><span>OOH — Subway · Bus Shelter</span></div>
+          <figure class="fig" style="--r:66%" data-src="images/jestina-06-songhyekyo.webp" data-alt="송혜교 J.Estina La Cruna 지면 광고">
+            <div class="fig__ph"><span>Print — La Cruna</span></div>
           </figure>
         </div>
         <!-- 이 행은 135% — Pink Box 포스터가 통째로 작품이라 정사각 크롭 시
@@ -488,8 +511,8 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
           <figure class="fig" style="--r:135%" data-src="images/jestina-04-seasonal.webp" data-alt="J.Estina 시즌 캠페인 — Pink Box">
             <div class="fig__ph"><span>Seasonal Campaign</span></div>
           </figure>
-          <figure class="fig" style="--r:135%" data-src="images/jestina-05-brochure.webp" data-alt="J.Estina 브로셔 및 프로덕션">
-            <div class="fig__ph"><span>Brochure &amp; Production</span></div>
+          <figure class="fig" style="--r:135%" data-src="images/jestina-07-oriental.webp" data-alt="J.Estina Oriental Bloom 주얼리 제품 화보">
+            <div class="fig__ph"><span>Oriental Bloom</span></div>
           </figure>
         </div>
         <figcaption>J.Estina · ERGHE · J.Estina RED · JE · J.Estina China — BI/CI / Advertising / VMD / Production</figcaption>
@@ -520,12 +543,42 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
     </div>
   </section>
 
+  <!-- ══ DIGITAL ══ -->
+  <section id="digital">
+    <div class="wrap">
+      <div class="bar"></div>
+      <div class="shead">
+        <span class="snum">04 — Digital</span>
+        <h2>Digital</h2>
+        <p>브랜드 자사몰 · 이커머스 디자인</p>
+      </div>
+
+      <div class="mockup-grid">
+        <figure class="mockup">
+          <div class="mockup__bar">
+            <span class="mockup__dot"></span><span class="mockup__dot"></span><span class="mockup__dot"></span>
+            <span class="mockup__url">findkapoor.com</span>
+          </div>
+          <img class="mockup__screen" loading="lazy" decoding="async" src="images/web-findkapoor.webp" alt="Find Kapoor 자사몰 이커머스 웹사이트 메인 디자인">
+        </figure>
+        <figure class="mockup">
+          <div class="mockup__bar">
+            <span class="mockup__dot"></span><span class="mockup__dot"></span><span class="mockup__dot"></span>
+            <span class="mockup__url">jestina.com</span>
+          </div>
+          <img class="mockup__screen" loading="lazy" decoding="async" src="images/web-jestina.webp" alt="J.Estina 자사몰 이커머스 웹사이트 메인 디자인">
+        </figure>
+      </div>
+      <div class="mockup-cap">Find Kapoor · J.Estina · Moonshot · Platon Ventures — E-Commerce / Web Renewal / Content Design</div>
+    </div>
+  </section>
+
   <!-- ══ ABOUT ══ -->
   <section id="about">
     <div class="wrap">
       <div class="bar"></div>
       <div class="shead">
-        <span class="snum">04 — About</span>
+        <span class="snum">05 — About</span>
         <h2>About</h2>
         <p>정재헌 · Jae Hun Jung</p>
       </div>
