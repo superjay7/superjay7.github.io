@@ -728,10 +728,20 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
   var ticking = false;
   function spy(){
     ticking = false;
+    /* 메뉴 순서와 페이지 섹션 순서가 다르다(메뉴는 Fashion이 먼저지만
+       페이지는 Eyewear가 먼저). 따라서 "마지막으로 순회된 항목"이 아니라
+       offsetTop으로 골라야 한다 — 헤더 라인을 지난 섹션 중 가장 아래
+       (offsetTop 최대)가 지금 보고 있는 섹션이다.
+       또 페이지 끝의 Contact는 그 top이 헤더 라인까지 올라오지 못하므로,
+       스크롤이 바닥에 닿으면 가장 아래 섹션을 현재로 친다. */
     var line = window.scrollY + syncHeaderHeight() + 8;
-    var active = null;
+    var atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 2;
+    var active = null, activeTop = -Infinity;
     pairs.forEach(function(p){
-      if (p.sec.offsetTop <= line) active = p.link;
+      var top = p.sec.offsetTop;
+      if ((atBottom || top <= line) && top > activeTop){
+        active = p.link; activeTop = top;
+      }
     });
     pairs.forEach(function(p){
       if (p.link === active) p.link.setAttribute("aria-current","true");
