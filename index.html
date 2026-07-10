@@ -175,6 +175,16 @@ section{padding:var(--gap) var(--pad);scroll-margin-top:var(--hh,60px)}
   display:block;margin-top:7px;font-family:var(--sans);
   font-size:clamp(11.5px,1.05vw,13.5px);color:var(--ink-3);letter-spacing:.01em;line-height:1.6;
 }
+/* 성과 라인 — 역할 문장 아래, 얇은 rule로 구분하고 핵심 수치를 강조 */
+.p-result{
+  margin:16px auto 0;max-width:62ch;padding-top:14px;border-top:1px solid var(--line);
+  font-family:var(--kr);font-size:clamp(12.5px,1.2vw,15px);line-height:1.7;color:var(--ink);
+}
+.p-result b{font-weight:600}
+.p-result .en{
+  display:block;margin-top:5px;font-family:var(--sans);
+  font-size:clamp(11px,1vw,12.5px);color:var(--ink-3);letter-spacing:.01em;line-height:1.55;
+}
 
 /* image grid — mirrors the PDF's 2/3-up plates */
 .plate{display:grid;gap:clamp(8px,1vw,14px);margin-top:8px}
@@ -350,6 +360,10 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
             럭셔리 아이웨어 브랜드 경험을 연결하는 통합 크리에이티브 전략 및 브랜딩 리드.
             <span class="en">Integrated creative strategy and branding lead connecting luxury eyewear brand experiences.</span>
           </p>
+          <p class="p-result">
+            재직 중 <b>매출 694억 → 835억 원 (+20%)</b> 성장 · 2026년 1,100억 목표
+            <span class="en">Revenue KRW 69.4B → 83.5B (+20%) during tenure · targeting KRW 110B in 2026</span>
+          </p>
         </div>
 
         <!-- 이미지 교체: data-src에 파일 경로만 넣으면 자동 반영됩니다. 예) data-src="images/look-01.jpg" -->
@@ -423,6 +437,10 @@ footer{padding:26px var(--pad);border-top:var(--rule);text-align:center}
           <p class="p-role">
             Find Kapoor를 포함한 패션 브랜드의 브랜딩 및 크리에이티브 디렉션 총괄.
             <span class="en">Branding and creative direction for fashion brands including Find Kapoor.</span>
+          </p>
+          <p class="p-result">
+            Find Kapoor <b>3년 연평균 200%+ 성장</b> · 국내에서 글로벌 브랜드로 전환 (일본 W Concept · 중국 Tmall)
+            <span class="en">Find Kapoor — 200%+ CAGR over three years · scaled from a domestic label to a global brand (Japan W Concept, China Tmall)</span>
           </p>
         </div>
 
